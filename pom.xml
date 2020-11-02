@@ -43,13 +43,38 @@
 					<groupId>com.fasterxml.jackson.dataformat</groupId>
 					<artifactId>jackson-dataformat-xml</artifactId>
 				</exclusion>
-			</exclusions>			
+			</exclusions>
 		</dependency>
+		
 		<!-- Para la asignación de identificadores únicos a los procesos (ID's) -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-sleuth</artifactId>
 		</dependency>		
+		
+		<!-- Para encolar los mensajes de los micro servicios en el bus amqp que utiliza el servidor RabbitMQ -->
+		<dependency>
+			<groupId>org.springframework.amqp</groupId>
+			<artifactId>spring-rabbit</artifactId>
+		</dependency>
+		<!-- Para version de spring boot <= 2.0.*
+ 		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+		</dependency>
+ 		-->
+ 		
+		<!-- Para consumir los mensajes de los micro servicios almacenados en RabbitMQ a través del servidor Zipkin -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
+		</dependency>
+		<!-- Para version de spring boot <= 2.0.* 
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
+		</dependency> 
+		-->
 		
 		<!-- Para el manejo de JPA -->
 		<dependency>
